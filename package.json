@@ -1,0 +1,36 @@
+{
+  "name": "intercup-backend",
+  "version": "1.0.0",
+  "description": "Backend for InterCup",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "bcryptjs",
+    "jwt"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "html-to-text": "^8.2.0",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "juice": "^8.0.0",
+    "mongoose": "^6.2.9",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.7.3",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
