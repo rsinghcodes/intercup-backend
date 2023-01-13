@@ -46,7 +46,12 @@ router.post('/register', async (req, res) => {
 
     const url = `${BASE_URL}/auth/user/${user.id}/verify/${token.token}`;
 
-    await sendEmail(user.fullname, user.email, 'Account Activation Link', url);
+    await sendEmail(
+      user.fullname,
+      user.email,
+      'Welcome to InterCup App! Confirm your Email',
+      url
+    );
 
     return res
       .status(201)

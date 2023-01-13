@@ -20,14 +20,16 @@ module.exports = async (name, email, subject, verificationLink) => {
     });
 
     const templatePath = path.join(__dirname, '../templates/index.ejs');
-    console.log(templatePath);
     const template = fs.readFileSync(templatePath, 'utf-8');
     const html = ejs.render(template, { name, verificationLink });
     const text = htmlToText(html);
     const htmlWithStylesInlined = juice(html);
 
     await transporter.sendMail({
-      from: process.env.USER,
+      from: {
+        name: process.env.APP_NAME,
+        address: process.env.USER,
+      },
       to: email,
       subject: subject,
       html: htmlWithStylesInlined,
